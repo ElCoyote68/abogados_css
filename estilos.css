@@ -1,0 +1,168 @@
+@font-face {
+    font-family: archivo;
+    src: url(fuentes/Archivo-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+    font-family: campana;
+    src: url(fuentes/CampanaScript_PERSONAL_USE_ONLY.otf);
+}
+
+* {
+    /* CSS reset */
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+header {
+    div {
+        position: relative;
+        width: fit-content;
+        /* que ajuste el ancho a su contenido */
+        margin: auto;
+        /* para centrarlo */
+    }
+
+    h1 {
+        font-family: campana, cursive;
+        font-size: 6em;
+        color: white;
+        background-color: rgb(29, 29, 29);
+        text-align: center;
+        font-weight: 100;
+        /* Ya que el h1 es negrita por defecto */
+    }
+
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 6em;
+        background-color: rgba(0, 0, 0, 0.500);
+        color: white;
+        width: 50%;
+        /* Para que el div sea el padre al usar posicionamiento absoluto,
+        debemos darle position: relative a ese div */
+        position: absolute;
+        top: 100px;
+        padding: 1em;
+        font-weight: bold;
+
+    }
+}
+
+section h2 {
+    font-size: 1.5em;
+    color: white;
+    background: linear-gradient(90deg, black 0%, rgb(165, 165, 165) 100%);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0.5em 1em;
+    font-weight: normal;
+}
+
+#compromiso p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(102, 102, 102);
+    text-align: justify;
+    padding: 1em 3em;
+}
+
+.contenedorPublicaciones {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+
+    /* Con > indicamos el hijo directo ya que el div de caja cada también es "hijo" (nieto) pero no
+    queremos que se le aplique esto */
+    > div {
+        background-size: contain;
+        display: flex;
+        flex-direction: column;
+        justify-content: end; 
+    }
+    >div:first-of-type  {
+        background-image: url(imagenes/abogados.jpg);
+    }
+
+    >div:nth-of-type(2)  {
+        background-image: url(imagenes/futuro.jpg);
+    }
+
+    >div:last-of-type  {
+        background-image: url(imagenes/pensiones.jpg);
+    }
+
+    .caja {
+        /* Para poder ver la imagen de fondo ponemos margin */
+        margin-top: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        padding: 2em 1em;
+        background-color: white;
+        box-shadow: 2px 2px 2px black;
+        h3 {
+            font-size: 1.4em;
+            margin-bottom: .7em;
+        }
+        p {
+            margin-bottom: .7em;
+        }
+        a {
+            color:rgb(43, 121, 236);
+            font-family: Arial, Helvetica, sans-serif;
+            /* ::first-letter solo se aplica a elementos de tipo bloque */
+            display: block;
+        }
+        a::first-letter {
+            text-transform: uppercase; /* La primera letra en mayúsculas */
+        }
+    }
+}
+
+.contenedorOpiniones {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    column-gap: 100px;
+    margin-bottom: 30px;
+    div {
+        max-width: 30%;
+        background: linear-gradient(135deg, rgb(132, 207, 237) 0%, rgb(8, 122, 192) 100%);
+        border-radius: 10px;
+        box-shadow: 1px 1px 2px rgb(135, 134, 134), -1px -1px 2px rgb(135, 134, 134);
+        text-align: center;
+        margin-top:100px;
+        img {
+            border-radius: 50%;
+            box-shadow: 1px 1px 2px rgb(135, 134, 134);
+            margin-top: -70px;
+            width: 50%;
+        }
+        p:first-of-type {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        p:last-of-type {
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic;
+            text-shadow: 1px 1px 1px white;
+            margin: auto 2em;
+        }
+    }
+}
+
+footer {
+    width: 20%;
+    border-top: 3px solid black;
+    text-align: center;
+    margin: auto /* centrarlo */;
+    p {
+        margin-top: 1em;
+    }
+}
+main {
+    width: 1280px;/* le damos el ancho de la imagen */
+    margin: auto; /*centrarlo */
+}
