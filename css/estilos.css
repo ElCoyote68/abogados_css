@@ -1,0 +1,170 @@
+@font-face {
+    font-family: archivo;
+    src: url(../fuentes/Archivo-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+    font-family: campana;
+    src: url(../fuentes/CampanaScript_PERSONAL_USE_ONLY.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+header {
+    div {
+        position: relative;
+        width: fit-content;
+        /*ajusta el ancho a su contenido*/
+        margin: auto;
+        /*para centrarlo*/
+    }
+
+    h1 {
+        background-color: #282828;
+        color: white;
+        font-family: campana, cursive;
+        font-size: 6em;
+        text-align: center;
+        font-weight: 100;
+        padding-top: .5em;
+    }
+
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 6em;
+        background-color: rgba(0, 0, 0, 0.485);
+        color: white;
+        font-weight: bold;
+        padding: .5em;
+        width: 50%;
+        /* para que el DIV  sea el padre al usar posicionamioento absoluto,
+        debemos darle position:relative a ese header */
+        position: absolute;
+        top: 90px;
+    }
+
+}
+
+section h2 {
+    color: white;
+    font-size: 1.5em;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 82%, rgba(247, 247, 247, 1) 100%);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: .5em 1em;
+    font-weight: normal;
+}
+
+#compromiso p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #676767;
+    text-align: justify;
+    padding: 1em 3em;
+}
+
+.contenedorPublicaciones {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+
+    >div:first-of-type {
+        background-image: url(/imagenes/tendencias.jpg);
+        background-size: contain;
+    }
+
+    >div:nth-of-type(2) {
+        background-image: url(/imagenes/pensiones.jpg);
+        background-size: contain;
+    }
+
+    >div:last-of-type {
+        background-image: url(/imagenes/futuro.jpg);
+        background-size: contain;
+    }
+}
+
+.caja {
+    background-color: white;
+    box-shadow: 2px 2px 2px black;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+
+    h3 {
+        font-size: 1.4em;
+        margin-bottom: .7em;
+    }
+
+    p {
+        margin-bottom: .7em;
+    }
+
+    a {
+        color: rgb(41, 157, 220);
+        display: block;
+
+    }
+
+    a::first-letter {
+        text-transform: uppercase;
+    }
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 100px;
+
+    div {
+        background: linear-gradient(90deg, rgba(102, 212, 227, 1) 52%, rgb(17, 165, 223) 100%);
+        border-radius: 10px;
+        box-shadow: 1px 1px 2px rgb(132, 132, 132), -1px -1px 2px rgb(132, 132, 132);        
+        text-align: center;
+        margin-top: 100px;
+        max-width: 30%;
+        margin-bottom: 50px;
+    }
+
+    img {
+        border-radius: 50%;
+        box-shadow: 1px 1px 2px rgb(132, 132, 132), -1px -1px 2px rgb(132, 132, 132);
+        box-shadow: ;
+        margin-top: -70px;
+        width: 50%;
+
+    }
+
+    p:first-of-type {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+
+    }
+
+    p:last-of-type {
+        font-family: 1.5;
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: italic;
+        font-weight: 200;
+        margin: 1em;
+    }
+}
+footer{
+    width: 20%;
+    border-top: solid 3px black;
+    text-align: center;
+    margin: auto;
+    p{
+        margin-top: 1em;
+    }
+}
+main{
+    width: 1280px;
+    margin: auto;
+}
